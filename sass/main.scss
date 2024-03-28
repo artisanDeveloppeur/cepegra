@@ -1,0 +1,35 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+
+@import "./base/_base.scss";
+@import "./base/_reset.scss";
+@import "./base/_typography.scss";
+@import "./base/_grid.scss";
+@import "./base/_boxes.scss";
+@import "./base/_visibility.scss";
+
+
+@import "./layout/_navigation.scss";
+@import "./layout/_menu-burger.scss";
+@import "./layout/_form.scss";
+@import "./layout/_form-custom.scss";
+
+
+@import "./components/_buttons.scss";
+@import "./components/_alert.scss";
+@import "./components/_table.scss";
+@import "./components/_card-speaker.scss";
+@import "./components/_all-speakers.scss";
+@import "./components/_heros.scss";
+
+/* with js */
+@import "./components/_modal.scss";
+@import "./components/_tabs.scss";
+@import "./components/_tooltip.scss";
+
+
+//@import "./pages/_menu-search.scss";
+@import "./pages/_formulaire.scss";
+
+
+@import "./themes/light-style.scss";
+@import "./themes/dark-style.scss";

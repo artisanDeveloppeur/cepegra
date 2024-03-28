@@ -1,0 +1,46 @@
+.nav-pills {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-pills a {
+  border: solid 1px #000000;
+  padding: 8px 16px;
+  text-decoration: none;
+  background: lightgray;
+  border-left: 1px solid #000000;
+  color: #151E16;
+}
+
+.nav-pills a[aria-selected="true"] {
+  background: grey;
+  border-left: 1px solid #000000;
+  color: #FEF0E7;
+}
+
+/*.nav-pills a:focus */
+.nav-pills a:hover {
+  background: darkgray;
+  border-left: 1px solid #000000;
+  color: #151E16;
+}
+
+
+/**
+Animations
+**/
+[role="tabpanel"] {
+  overflow: hidden;
+  transition: .3s;
+}
+
+[role="tabpanel"][hidden="hidden"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  opacity: 0;
+}

@@ -1,0 +1,41 @@
+/*! SASS #layout - NAVIGATION */
+
+.navigation {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  gap: .5rem;
+  background: grey;
+  margin: 0;
+  border: none;
+
+  a {
+    border: 1px solid #fff;
+    color: white;
+    padding: 1rem;
+    margin: .4rem;
+    text-decoration: none;
+    transition: all 1s;
+
+    &:hover {
+      color: #046CAB;
+      background-size: 500px;
+      background-position: 250px;
+      border-radius: 2rem;
+
+    }
+  }
+}
+
+.navigation .logo {
+  margin-inline-end: auto !important;
+  order: -1;
+
+  //margin-right: 10em !important; // a enlever
+
+}
+
+.navigation .n3 {
+  order: -1;
+}

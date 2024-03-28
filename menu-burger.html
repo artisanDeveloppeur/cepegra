@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <style>
+
+body {
+    /*
+    width: 100vw;
+    height: 100vh;
+    */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #D0D0D0;
+}
+
+.header .siteLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 20px;
+}
+
+
+.header .menu a {
+font-weight: 400;
+font-size: 26px;
+line-height: 31.2px;
+color: black;
+text-transform: capitalize;
+
+}
+
+.container-grid span{
+    background: grey;
+    width: 5rem;
+    display: inline-block;
+    height: 1rem;
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+<body >
+    <header class="header">
+        <div class="siteLogo">
+            <a href="style-guide.html" class="logo txt-uppercase">design system
+                <!--
+                <img src="img/logo.png" alt="">
+                -->
+            </a>
+        </div>
+        <nav class="menu menu-burger m-visible s-visible xs-visible ">
+            <div class="fill" style="width: 0%;"></div>
+            <ul>
+                <li><a href="base.html" title="">base</a></li>
+                <li><a href="layout.html" title="">layout</a></li>
+                <li><a href="components.html" title="">components</a></li>
+                <li><a href="pages.html" title="">pages</a></li>
+                <li><a href="#" title="">Titre </a></li>
+                <li><a href="#" title=""><i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+        </nav>
+        <nav class="menu-mobile">
+            <div class="l-hide">
+                <div class="menu-slider" id="trigger">
+                    <i class="fas fa-bars"> MENU</i>
+                </div>
+                <div id="triggered">
+                    <ul class="triggered-link">
+                        <li class="txt-right d-flex flex-just-end"><i class="fas fa-times" id="close"></i></li>
+                        <li><a href="base.html" title="">base</a></li>
+                        <li><a href="layout.html" title="">layout</a></li>
+                        <li><a href="components.html" title="">components</a></li>
+                        <li><a href="pages.html" title="">pages</a></li>
+                        <li><a href="exercices.html" title="">exercices</a></li>
+                        <li><a href="#" title=""><i class="fa-solid fa-user-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="container-grid">
+      <!--
+
+          <div>
+            <span>1</span>
+            <span>2</span> 
+            <span>3</span> 
+            <span>4</span> 
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span> 
+            <span>9</span> 
+            <span>10</span> 
+            <span>11</span>
+            <span>12</span>
+          </div>
+      -->
+
+          <hr>
+          <div class="grid">
+              <p class="col-xl-4 col-l-6 col-m-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend maximus sapien, vitae sodales elit porta porta. Donec ullamcorper blandit nisl vel scelerisque.</p>
+              <p class="col-xl-4 col-l-6 col-m-12">Integer aliquet quis nisi non egestas. Donec nibh nulla, tempus id feugiat non, cursus vel dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p class="col-xl-4 col-l-6 col-m-12">Etiam commodo metus ut neque suscipit, eget vulputate est dignissim. Vestibulum scelerisque suscipit fringilla.</p>              
+              <p class="col-xl-4 col-l-6 col-m-12">Nullam iaculis justo lorem, imperdiet semper nulla egestas nec. Praesent sed lectus vitae ligula maximus egestas ut nec augue.</p>
+              <p class="col-xl-4 col-l-6 col-m-12">Donec sed varius ipsum, at dictum lorem. Duis condimentum sapien eros, eget semper urna euismod sed.</p>
+              <p class="col-xl-4 col-l-6 col-m-12"> Integer quis tortor quis neque porttitor bibendum. Donec iaculis viverra augue in pellentesque. </p>
+          </div>
+          <hr>
+
+          <div class="grid">
+            <p class="col-xl-3 col-l-4 col-m-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend maximus sapien, vitae sodales elit porta porta. Donec ullamcorper blandit nisl vel scelerisque.</p>
+            <p class="col-xl-3 col-l-4 col-m-6">Integer aliquet quis nisi non egestas. Donec nibh nulla, tempus id feugiat non, cursus vel dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="col-xl-3 col-l-4 col-m-6">Etiam commodo metus ut neque suscipit, eget vulputate est dignissim. Vestibulum scelerisque suscipit fringilla.</p>              
+            <p class="col-xl-3 col-l-4 col-m-6">Nullam iaculis justo lorem, imperdiet semper nulla egestas nec. Praesent sed lectus vitae ligula maximus egestas ut nec augue.</p>
+            <p class="col-xl-3 col-l-4 col-m-6">Donec sed varius ipsum, at dictum lorem. Duis condimentum sapien eros, eget semper urna euismod sed.</p>
+            <p class="col-xl-3 col-l-4 col-m-6"> Integer quis tortor quis neque porttitor bibendum. Donec iaculis viverra augue in pellentesque. </p>
+            <p class="col-xl-3 col-l-4 col-m-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend maximus sapien, vitae sodales elit porta porta. Donec ullamcorper blandit nisl vel scelerisque.</p>
+            <p class="col-xl-3 col-l-4 col-m-6">Integer aliquet quis nisi non egestas. Donec nibh nulla, tempus id feugiat non, cursus vel dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            
+          </div>
+    </main>
+    <script>
+        let triggered = document.querySelector('#triggered')
+
+    document.querySelector('#trigger').addEventListener("click", () =>{
+      triggered.classList.toggle('visible');
+    })
+
+    
+    document.querySelector('#close').addEventListener("click", () =>{
+      triggered.classList.remove('visible');
+    })
+  
+      </script>
+</body>
+</html>

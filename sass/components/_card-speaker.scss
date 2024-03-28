@@ -1,0 +1,143 @@
+/*! SASS #components - SPEAKER */
+
+:root {
+  --pd-card: 1.25rem;
+  --font: 'maven pro', helvetica, sans-serif;
+  --bullet: 2rem;
+}
+
+.card_flex_div {
+  display: flex;
+}
+
+.card {
+  max-width: 15rem;
+  border: 1px solid #888;
+  padding: var(--pd-card);
+  padding-block-end: .25rem;
+  font-family: var(--font);
+
+  &__pict {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+
+    &::after {
+      grid-area: 1/1/-1/-1;
+      display: grid;
+      border-radius: var(--bullet);
+      width: var(--bullet);
+      height: var(--bullet);
+      border: 2px solid #3d3c3c;
+      content: "i";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /*
+    &::before {
+      grid-area: 1/1/-1/-1;
+      z-index: 1;
+      display: grid;
+      background: #000;
+      width: calc(var(--bullet) * .1);
+      height: calc(var(--bullet) * .5);
+      content: "r";
+    }
+    */
+
+  }
+
+  &__img {
+    width: 100%;
+    grid-area: 1/1/-1/-1;
+  }
+
+  &__orator,
+  &__name {
+    font-weight: normal;
+  }
+
+  &__orator {
+    font: 200 1.6rem/1 var(--font);
+    display: grid;
+    color: #000a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  &__location {
+    margin: 0;
+  }
+
+  &__orator {
+
+    // code ici
+    &::after {}
+
+    &--active {}
+  }
+
+  &__topic,
+  &__description,
+  &__time,
+  &__room,
+  &__link {
+    font-size: 0;
+  }
+}
+
+// display: none;
+
+
+
+
+.cardoff {
+  max-width: 15rem;
+  height: 21.5rem;
+  border: 1px solid #888;
+  padding: calc(var(--pd-card) * 1.5);
+  padding-block-end: .25rem;
+  font-family: var(--font);
+  background: #333;
+  color: #fff;
+  display: grid;
+  align-content: space-between;
+
+  &__pict {
+    display: none;
+  }
+
+  &__location {
+    font-size: 0;
+  }
+
+  &__topic,
+  &__description {
+    margin: 0;
+  }
+
+  footer {
+    margin-block-end: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    margin-inline-start: auto;
+    color: grey
+  }
+
+  &__room {
+    padding-inline-start: .8rem;
+    margin-inline-start: .8rem;
+    border-inline-start: 3px solid grey;
+  }
+
+  &__orator {
+    margin: 0;
+  }
+}

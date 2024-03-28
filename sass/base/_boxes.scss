@@ -1,0 +1,104 @@
+//------------------------------------------------------------------------------------------------
+// TEXT ALIGNMENTS
+//------------------------------------------------------------------------------------------------
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+.a-center {
+  align-items: center;
+}
+
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.txt-lowercase {
+  text-transform: lowercase;
+}
+
+.txt-capitalize {
+  text-transform: capitalize;
+}
+
+//------------------------------------------------------------------------------------------------
+// FLOAT
+//------------------------------------------------------------------------------------------------
+
+.float-left {
+  float: left;
+  margin: 1rem 2rem 0.5rem 0;
+}
+
+.float-right {
+  float: right;
+  margin: 1rem 0 0.5rem 2rem;
+}
+
+.float-none {
+  float: none;
+}
+
+//------------------------------------------------------------------------------------------------
+// DIPSLAY
+//------------------------------------------------------------------------------------------------
+.d {
+  &-block {
+    display: block;
+  }
+
+  &-flex {
+    display: flex;
+  }
+
+  &-inlineBlock {
+    display: inline-block;
+  }
+
+  &-listItem {
+    display: list-item;
+  }
+
+  &-none {
+    display: none;
+  }
+}
+
+//------------------------------------------------------------------------------------------------
+// HELP FLEX
+//------------------------------------------------------------------------------------------------
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-just-c {
+  justify-content: center;
+}
+
+.flex-just-end {
+  justify-content: flex-end;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-noWrap {
+  display: flex;
+  flex-wrap: nowrap;
+}

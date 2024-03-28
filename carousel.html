@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <style>
+.carousel__title{
+    margin-top: 50px;
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+
+.item {
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+    transition: transform 0.3s;
+    transform: translate3d(0, -1px, 0);
+  }
+  
+  .item:hover  {
+    transform: translate3d(0, -10px, 0);
+  }
+  
+  .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .item__body {
+    padding: 10px;
+    /* item__description + item__price  */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .item__title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #232323;
+  }
+
+  .item__price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #232323;
+  }
+  
+  .item__description {
+    color: #585858;
+  }
+  
+  .items {
+    position: relative;
+  }
+  
+  /** CAROUSEL */
+  .carousel {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .carousel__container::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+  
+  .carousel__item {
+    float: left;
+  }
+  
+  .carousel__next, .carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFF url(./img/svg/arrow-right.svg) center center no-repeat;
+
+    background-size:  20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    right: -20px;
+    box-shadow: 0 15px 35px #3232321a,0 5px 15px #0000001a;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .carousel__next:hover, .carousel__prev:hover {
+    transform: scale(1.2)
+  }
+  
+  .carousel__prev {
+    background-image: url(./img/svg/arrow-left.svg);
+
+    right: auto;
+    left: -20px;
+  }
+  
+  .carousel__next--hidden, .carousel__prev--hidden {
+    opacity: 0;
+  }
+  
+  .carousel__pagination {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+  }
+  
+  .carousel__pagination__button {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    box-shadow: 0 2px 5px #3232321a;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .carousel__pagination__button--active, .carousel__pagination__button:hover {
+    transform: scale(1.4);
+  }
+  
+  @media screen and (min-width: 800px) {
+    .carousel__pagination {
+      display: block;
+    }
+  }
+
+    </style>
+</head>
+<body>
+<div class="container">
+            <div class="carousel__title">
+                Carousel en boucle 
+            </div>
+            <div id="carousel1">
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/9017e99275b5aa4a8e0208d4ce6e28ca.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 1 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/5b066203b5a7ba82e80c6a1b9ee07753.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 2 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/5783b3868c1c73d5ae0d623b4f56d98e.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 3 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/a7162b21f2eda2ff121f494421dd176a.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 4 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/2254f45840a2a73d6a0015872372a379.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 5 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/f0d4719662866ddb442b9ee1ce841a1b.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 6 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel__title">Carousel infini</div>
+            <div id="carousel2">
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/9017e99275b5aa4a8e0208d4ce6e28ca.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 1 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/5b066203b5a7ba82e80c6a1b9ee07753.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 2 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/5783b3868c1c73d5ae0d623b4f56d98e.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 3 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/a7162b21f2eda2ff121f494421dd176a.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 4 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/2254f45840a2a73d6a0015872372a379.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 5 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/f0d4719662866ddb442b9ee1ce841a1b.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 6 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel__title">Carousel 4 éléments avec défilement 2 par 2</div>
+            <div id="carousel3">
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/9017e99275b5aa4a8e0208d4ce6e28ca.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 1 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/5b066203b5a7ba82e80c6a1b9ee07753.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 2 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/5783b3868c1c73d5ae0d623b4f56d98e.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 3 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/a7162b21f2eda2ff121f494421dd176a.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 4 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/2254f45840a2a73d6a0015872372a379.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 5 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./img-test/f0d4719662866ddb442b9ee1ce841a1b.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">Mon titre 6 </div>
+                        <div class="item__description">Ici une petite description pour tester le carousel </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/carousel.js"> </script>
+</body>
+</html>

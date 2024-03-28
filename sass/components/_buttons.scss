@@ -1,0 +1,142 @@
+/*! SASS #components - BUTTONS  */
+$button-color: #f6f6f6;
+$button-color-hover: grey; //#18bfef
+
+.btn,
+button {
+  color: #212931;
+  text-align: center;
+  letter-spacing: .07rem;
+  text-transform: uppercase;
+  background: #f6f6f6;
+  border: 3px solid #212931;
+  border-radius: 0;
+  margin: 1rem 1rem 1rem 0;
+  padding: .7rem 1.5rem;
+  font-family: Source Sans Pro, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.border-radius {
+  border-radius: 50px;
+  ;
+}
+
+.btn:hover,
+button:hover {
+  color: $button-color-hover;
+  border-color: $button-color-hover;
+}
+
+.btn.large,
+button.large {
+  padding: 1rem 2.4rem;
+  font-size: 1.1em;
+}
+
+.btn.small,
+button.small {
+  padding: .5rem 1.2em;
+  font-size: .8em;
+}
+
+.btn.fit,
+button.fit {
+  width: 50%;
+  text-align: center;
+}
+
+.btn.opacity,
+button.opacity {
+  opacity: .4;
+}
+
+.btn.primary,
+button.primary {
+  color: #f6f6f6;
+  background: #212931;
+}
+
+.btn.primary:hover,
+button.primary:hover {
+  color: #f6f6f6;
+  background: $button-color-hover;
+  border: 3px solid $button-color-hover;
+}
+
+.btn-logo,
+.button-logo {
+  color: #f6f6f6;
+  border: 5px solid #f6f6f6;
+  padding: .3em .9em;
+}
+
+.btn-logo:hover,
+.button-logo:hover {
+  color: #f6f6f6;
+  border-color: #f6f6f6;
+}
+
+.btn-icone i {
+  padding: 0 0.5rem 0 0;
+}
+
+$default-color: #eee;
+$primary-color: grey;
+//$second-color:adjust-hue($defaut-color,90deg);
+//$dark-color:darken($defaut-color,20%);
+
+@mixin btn2($bg: $default-color, $c: #234, $p: 1rem, $p2: 2rem, $o: 1, $br: 5rem) {
+  background: $bg;
+  color: $c;
+  padding: $p $p2;
+  opacity: $o;
+  border-radius: $br;
+}
+
+.btn2 {
+  border: 1px solid #0009;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+
+  //padding: 1rem 2rem;
+  //border-radius: 5rem;
+  @include btn2();
+
+  &:hover {
+    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &--primary {
+    border: none;
+    @include btn2($bg: white)
+  }
+
+  &--default:hover {
+    border: 1px solid $button-color-hover;
+    @include btn2($c: $button-color-hover)
+  }
+
+  &--disable {
+    @include btn2($o: 0.3)
+  }
+
+  &--active {
+    border: none;
+    @include btn2($bg: $button-color-hover, $c: black)
+  }
+
+  &--active:hover {
+    border: none;
+    @include btn2($bg: $button-color-hover, $c: white)
+  }
+
+  &--arrow {
+    border: 1px solid grey;
+    box-shadow: none;
+    @include btn2($bg: white, $c: black, $p: 1rem, $p2: 1rem, $o: 1)
+  }
+}

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide de Style </title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <style>
+      
+    </style>
+
+</head>
+
+<body class="style-guide">
+    <!-- Début des données pour le PDF -->
+    <div class="canvas_div_pdf">
+    <header class="style-guide-header">
+        <!-- Menu Hamburger / Croix -->
+        <div id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <!-- Titre-->
+        <h1>Projet Style Guide</h1>
+
+        <!-- Switch Dark / Light Mode -->      
+        <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkboxMode">
+            <input type="checkbox" id="checkboxMode" />
+            <div class="slider round"></div>
+        </label>
+        <label style="margin-left: 10px;">Mode</label>
+        </div>
+
+        <!-- MENU DES MODULES -->
+        <nav  class="menu ">
+
+            <h2>MENU DES MODULES</h2>
+           <ul>
+              <li><a href="menu-burger.html">Menu burger</a></li>
+              <li><a href="heros.html">Heros</a></li>
+            </ul>  
+        </nav>
+    </header>
+
+    <div class="modules containerSommaire">
+      <div class="h2">Sommaire des modules</div>
+      <div id="sommaire">
+
+      </div>
+      <!-- LE MODULE DE ..... -->
+      <div  class="title titlesommaire">
+        <h2 id="sommairebase" >Base</h2>
+        <h2 id="sommairelayout" >Layout</h2>
+        <h2 id="sommaircomponent" >Components</h2>
+        <!--
+                  <h2 id="sommaire..." ></h2>
+
+        -->
+      </div>
+
+      <div class="divmodules" id="">
+        <div class="title">
+            <h3 id="sommairemenu" >Menu</h3>
+            <span>Codepen : <a href="https://codepen.io/DG2023/pen/qBJjQrR" target="_blank" >Menu de base</a></span>
+        </div>
+        <div class="bordure"></div>
+            <div class="contenu">
+              <nav class="navigation">
+                <a href="#" class="logo">Logo</a>
+                <a href="#" class="n1">home</a>
+                <a href="#" class="n2">about</a>
+                <a href="#" class="n3">team</a>
+                <a href="#" class="n4">contact</a>
+              </nav>
+
+            </div>
+        </div>
+
+      <!--
+        <div class="divmodules" id="div-------">
+            <div class="title">
+            <h3 id="sommaire-----">-------</h3>
+            </div>
+            <div class="bordure"></div>
+            <div class="contenu">
+
+
+            </div>
+
+        </div>
+      -->
+      <!-- LE MODULE DE ..... -->
+      <div class="divmodules" id="">
+        <div class="title">
+            <h3 id="sommaireboutons" >Boutons</h3>
+            <span>Codepen : <a href="https://codepen.io/DG2023/pen/gOBGYym" target="_blank" >Boutons</a></span>
+        </div>
+        <div class="bordure"></div>
+            <div class="contenu">
+              <section class="grid">
+                    <div>
+                        <a href="#" class="btn primary">primary</a>
+                        <a href="#" class="btn">default</a>
+                        <a href="#" class="btn primary border-radius">primary</a>
+                        <a href="#" class="btn border-radius">default</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="btn large primary ">large</a>
+                        <a href="#" class="btn">default</a>
+                        <a href="#" class="btn small">small</a>
+                        <a href="#" class="btn large primary border-radius ">large</a>
+                        <a href="#" class="btn border-radius">default</a>
+                        <a href="#" class="btn small border-radius">small</a>
+                    </div>
+
+                    <div class="d-flex">
+                        <a href="#" class="btn fit primary ">fit</a>
+                        <a href="#" class="btn fit ">fit</a>
+                        <a href="#" class="btn fit primary border-radius">fit</a>
+                        <a href="#" class="btn fit border-radius">fit</a>
+                    </div>
+
+                    <div class="d-flex">
+                        <a href="#" class="btn fit small primary ">fit + small</a>
+                        <a href="#" class="btn fit small ">fit + small</a>
+                        <a href="#" class="btn fit small primary border-radius">fit + small</a>
+                        <a href="#" class="btn fit small border-radius">fit + small</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="btn btn-icone primary"><i class="fas fa-search"></i>Search</a>
+                        <a href="#" class="btn btn-icone"><i class="fas fa-download"></i>Upload</a>
+                        <a href="#" class="btn btn-icone primary border-radius"><i class="fas fa-search"></i>Search</a>
+                        <a href="#" class="btn btn-icone border-radius"><i class="fas fa-download"></i>Upload</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="btn primary opacity">Primary</a>
+                        <a href="#" class="btn opacity ">Default</a>
+                        <a href="#" class="btn primary opacity border-radius">Primary</a>
+                        <a href="#" class="btn opacity border-radius">Default</a>
+                    </div>
+              </section>
+            </section>
+            <hr />
+            <br/><br/>
+            <button class="btn2 btn2--primary">primary</button>
+            <button class="btn2 btn2--default">hover</button>
+            <button class="btn2 btn2--disable">disable </button>
+            <button class="btn2 btn2--active">action</button>
+            <br/><br/>
+            <button class="btn2 btn2--chevron">select <i class="fa-solid fa-chevron-up"></i></button>
+            <button class="btn2 btn2--arrow"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="btn2 btn2--arrow"><i class="fa-solid fa-arrow-right"></i></button>
+
+            </div>
+        </div>
+
+ 
+
+      <!-- LE MODULE DU FORMULAIRE -->
+      <div class="divmodules" id="divformulairecustom">
+            <div class="title titlesommaire">
+                <h3 id="sommaireform">Formulaire custom</h3>
+                <span>Codepen : <a href="" target="_blank" >Formulaire custom</a></span>
+            </div>
+            <div class="bordure"></div>
+                <div class="contenu">
+                   <div class="wrapper-form-custom">
+                        <div class="wrapper-form-custom-div">
+                          <label for="input">Input</label>
+                          <input type="text" class="custom_input" id="input" name="input" />
+                        </div>
+                        <div class="wrapper-form-custom-div search__wrapper">
+                          <label>
+                            <input class="search__input border" type="text" placeholder="Recherche">
+                          </label>
+                        </div> 
+                        <div class="wrapper-form-custom-div">
+                          <label for="input">Select</label>
+                          <select class="custom_select" >
+                              <option value="0" >Options à sélectionner</option>
+                              <option value="1">option 1</option>
+                              <option value="2">option 2</option>
+                          </select>
+                          <div class="custom-select-div dropdown-toggle" >
+                            <select>
+                              <option value="0">Select customisés (js)</option>
+                              <option value="1">option 1</option>
+                              <option value="2">option 2</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="wrapper-form-custom-div">
+                          <label>Textearea</label>
+                          <textarea class="custom-textarea"></textarea>
+                        </div>
+                        <div class="wrapper-form-custom-div">
+                          <fieldset>
+                            <legend>Radio</legend>
+                            <form class="form-radio-checkbox">
+                              <div class="wrapper-form-custom-div">
+                                <input id="radio-input-1" type="radio" value="myValue 1" name="radio-group" checked>
+                                <label for="radio-input-1" class="input-helper input-helper--radio">myValue 1</label>
+                                
+                                <input id="radio-input-2" type="radio" value="myValue 2" name="radio-group">
+                                <label for="radio-input-2" class="input-helper input-helper--radio">myValue 2</label>      
+                              </div>
+                            </form> 
+                          </fieldset>
+                          <fieldset>
+                            <legend>Radio custom</legend>
+                            <label class="container-custom-radio">One
+                              <input type="radio" checked="checked" name="radio">
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container-custom-radio">Two
+                              <input type="radio" name="radio">
+                              <span class="checkmark"></span>
+                            </label>
+                          </fieldset>
+          
+                        </div>
+                        <div class="wrapper-form-custom-div">
+                          <fieldset>
+                            <legend>Checkbox</legend>
+                            <form class="form-radio-checkbox">
+                              <div class="wrapper-form-custom-div">
+                                <input id="checkbox-input-1" type="checkbox" value="myValue 1" checked>
+                                <label for="checkbox-input-1" class="input-helper input-helper--checkbox">myValue 1</label>
+                                
+                                <input id="checkbox-input-2" type="checkbox" value="myValue 2">
+                                <label for="checkbox-input-2" class="input-helper input-helper--checkbox">myValue 2</label>
+                              </div>
+                            </form>  
+                          </fieldset>
+                          <fieldset>
+                              <legend>Checkbox  custom</legend>
+                              <label class="container-custom-checkbox">One
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="container-custom-checkbox">Two
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                          </fieldset>
+                          <div class="wrapper-form-custom-div">
+                            <label class="form-custom-switch">Switch
+                            <input type="checkbox" class="switchcheckbox" />
+                            </label>
+                          </div>
+
+                        </div>         
+                   </div>
+                   <hr/>
+                   <section>    
+                    <form method="" class="exemple grid">
+                        <div  class="grid">
+                            <div class="col-m-6 grid">
+                              <input type="text" name="names" id="name1" placeholder="Name" >
+                              <label  for="name1">Name</label>
+                          </div>
+                          <div class="col-m-6 grid">
+                            <input type="email" name="email" placeholder="Email" >
+                            <label for="email" > Email</label>
+                        </div>
+                        </div>
+                        <div class="grid">
+                          <select name="category" id="category">
+                              <option disabled="disabled" selected="selected">- Category -</option>
+                              <option value="">Option 1</option>
+                              <option value="">Option 2</option>
+                              <option value="">Option 3</option>
+                          </select>
+                          <label for="category">Category</label>
+                        </div>
+                        <div class="grid">
+    
+                            <div class="col-m-4 d-flex a-center">
+                                <input type="radio" name="choose" id="low" checked="checked" class="radio-input" />
+                                <label for="low" class="radio-label">Low</label>
+                            </div>
+                            <div class="col-m-4 d-flex a-center">
+                                <input type="radio" name="choose" id="normal" class="radio-input" />
+                                <label for="normal" class="radio-label">Normal</label>
+                            </div>
+                            <div class="col-m-4 d-flex a-center">
+                                <input type="radio" name="choose" id="high" class="radio-input" />
+                                <label for="high" class="radio-label">High</label>
+                            </div>
+                        </div>
+    
+                        <div class="grid">
+    
+                            <div class="col-m-6 d-flex a-center">
+                                <input type="checkbox" name="email" id="emaill" class="checkbox-input">
+                                <label for="emaill" class="checkbox-label">Email me a copy</label>
+                            </div>
+                            <div class="col-m-6 d-flex a-center">
+                                <input type="checkbox" name="test" id="test" checked="checked" class="checkbox-input" />
+                                <label for="test" class="checkbox-label">I am a human</label>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <textarea name="message" id="message1" placeholder="Enter your message"></textarea>
+                            <label for="message1" class="d-none">Message</label>
+                        </div>
+    
+                        <div class="grid">
+    
+                            <div class="col-xs-1">
+                                <input type="submit" value="Send message" class="btn primary">
+                                <label for="test" class="d-none">Send Message</label>
+                            </div>
+                        </div>
+    
+                    </form>
+                </section>
+                </div>
+        </div>
+        <div class="divmodules" id="divformulaire">
+            <div class="title titlesommaire">
+                <h3 id="sommaireform">Formulaire</h3>
+                <span>Codepen : <a href="" target="_blank" >Formulaire</a></span>
+            </div>
+            <div class="bordure"></div>
+                <div class="contenu">
+                   <div class="wrapper-form">
+                    <form class="form" autocomplete="off">    
+                      <fieldset>
+                        <div class="grid">
+                          
+                          <input required type="text" class="form__input" id="login" name="login" placeholder="login" pattern=".{6,}" />
+                          <label for="login" class="form__label">A Changer HTML</label>
+                          <div class="form__requirements">
+                                  Your login must be at least 6 characters
+                            </div>
+                        </div>                        
+                      </fieldset> 
+                      <hr style="width: 100%;">   
+                    <!--       
+                      <fieldset class="field">
+                          <div class="grid">                      
+                              <input required type="text" class="form__input" id="login" name="login" placeholder="login" pattern=".{6,}" />                     
+                              <label for="login" class="form__label">NickName</label>                       
+                          </div>
+                          <div class="form__requirements">
+                              Your login must be at least 6 characters
+                          </div>
+                      </fieldset>
+                     --> 
+                      <fieldset>
+                          <div class="grid">
+                              <input required id="email" type="email" class="form__input" name="email" placeholder="sample@test.ext" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                              <label for="email" class="form__label">Email</label>   
+                          </div>
+                          <div class="form__requirements">
+                              Please enter a valid email address
+                         </div>
+                      </fieldset>
+                      <fieldset>
+                          <div class="grid">
+                              <input required id="password" type="password" class="form__input" name="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" />
+                              <label for="password" class="form__label">Password</label>                      
+                          </div>
+                          <div class="form__requirements">
+                                Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.
+                        </div>
+                      </fieldset>                  
+                      <fieldset>
+                          <button class="form__button" type="submit">Submit</button>
+                      </fieldset>
+        
+                    </form>
+                   </div>
+                </div>
+        </div>
+  
+      <!-- LE MODULE DES COULEURS -->
+
+        <div class="divmodules" id="divcouleurs">
+        <div class="title titlesommaire">
+            <h3 id="sommairecolor">Couleurs</h3>
+            <span>Codepen : <a href="" target="_blank" >Couleurs</a></span>
+        </div>
+        <div class="bordure"></div>
+            <div class="contenu">
+
+                <div class="cardcolor">
+                <div class="carddiv">
+                    <div class="color"></div>
+                    <div class="container"> 
+                    <p>#3EC1C9</p> 
+                    </div>
+                </div>
+                <p>Couleur principale</p>
+                </div>
+
+                <div class="cardcolor">
+                <div class="carddiv">
+                    <div class="color"></div>
+                    <div class="container"> 
+                    <p>#FC5185</p> 
+                    </div>
+                </div>
+                <p>Couleur secondaire</p>
+                </div>
+
+                <div class="cardcolor">
+                <div class="carddiv">
+                    <div class="color"></div>
+                    <div class="container"> 
+                    <p>#3EC1C9</p> 
+                    </div>
+                </div>
+                <p>Couleur noir</p>
+                </div>
+
+                <div class="cardcolor">
+                <div class="carddiv">
+                    <div class="color"></div>
+                    <div class="container"> 
+                    <p>#3EC1C9</p> 
+                    </div>
+                </div>
+                <p>Couleur grise</p>
+                </div>
+
+                <div class="cardcolor">
+                <div class="carddiv">
+                    <div class="color"></div>
+                    <div class="container"> 
+                    <p>#3EC1C9</p> 
+                    </div>
+                </div>
+                <p>Couleur blanche</p>
+                </div>
+
+                <div class="cardcolor">
+                <div class="carddiv">
+                    <div class="color"></div>
+                    <div class="container"> 
+                    <p>#3EC1C9</p> 
+                    </div>
+                </div>
+                <p>Couleur ... </p>
+                </div>
+
+            </div>
+        </div>
+        <!-- LE MODULE DE LA TYPOGRAPHIE -->
+
+        <div class="divmodules" id="divtypo">
+            <div class="title titlesommaire">
+            <h3 id="sommairetypo">Typographie</h3>
+            <span>Codepen : <a href="" target="_blank" >Typographie</a></span>
+            </div>
+            <div class="bordure"></div>
+            <div class="contenu">
+                <h1 class="typo">Ajouter un style pour vos H1</h1>
+                <br>
+                <h2 class="typo">Ajouter un style pour vos H2</h2>
+                <br>
+                <h3 class="typo">Ajouter un style pour vos H3</h3>
+                <br>
+                <p>Ajouter un style pour votre corps de texte</p>
+            </div>
+        </div>
+
+
+
+        <!-- LE MODULE DES ALERT -->
+        <div class="divmodules" id="divalert">
+            <div class="title titlesommaire">
+            <h3 id="sommairealert">Alert</h3>
+            <span>Codepen : <a href="" target="_blank" >Alert</a></span>
+            </div>
+            <div class="bordure"></div>
+            <div class="contenu">
+              <section class="alert">
+ 
+                <div class="alert__box">This is a standard message</div>
+                <div class="alert__box alert__box--success">This is a success message</div>
+                <div class="alert__box alert__box--alert">This is a red alert</div>
+              
+              </section>
+
+            </div>
+
+        </div>
+                <!-- LE MODULE DES TABLE -->
+                <div class="divmodules" id="divtableresponsive">
+                  <div class="title titlesommaire">
+                  <h3 id="sommairetableresponsive">Table responsive</h3>
+                  <span>Codepen : <a href="" target="_blank" >Tableaux</a></span>
+                  </div>
+                  <div class="bordure"></div>
+                  <div class="contenu">
+                    <table class="table-responsive">
+                      <thead>
+                          <tr>
+                              <th>Nom</th>
+                              <th>Ville</th>
+                              <th>Tour 1</th>
+                              <th>Tour 2</th>
+                              <th>Position</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Jean marc</td>
+                              <td>Montpellier</td>
+                              <td>58min 40s</td>
+                              <td>1h23 58min 40s</td>
+                              <td>2ème</td>
+                          </tr>
+                          <tr>
+                              <td>Marie</td>
+                              <td>Montpellier</td>
+                              <td>1h23 58min 40s</td>
+                              <td>58min 40s</td>
+                              <td>3ème</td>
+                          </tr>
+                          <tr>
+                              <td>André</td>
+                              <td>Montpellier</td>
+                              <td>1h23 58min 40s</td>
+                              <td>58min 40s</td>
+                              <td>4ème</td>
+                          </tr>
+                          <tr>
+                              <td>Joséphine</td>
+                              <td>Montpellier</td>
+                              <td>1h23 58min 40s</td>
+                              <td>58min 40s</td>
+                              <td>4ème</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <table class="table-responsive">
+                      <thead>
+                          <tr>
+                              <th>Nom</th>
+                              <th>Ville</th>
+                              <th>Tour 1</th>
+                              <th>Tour 2</th>
+                              <th>Tour 3</th>
+                              <th>Position</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Jean marc</td>
+                              <td>Montpellier</td>
+                              <td>58min 40s</td>
+                              <td>1h23 58min 40s</td>
+                              <td>1h23 58min 40s</td>
+                              <td>2ème</td>
+                          </tr>
+                          <tr>
+                              <td>Marie</td>
+                              <td>Montpellier</td>
+                              <td>1h23 58min 40s</td>
+                              <td>1h23 58min 40s</td>
+                              <td>58min 40s</td>
+                              <td>3ème</td>
+                          </tr>
+                          <tr>
+                              <td>André</td>
+                              <td>Montpellier</td>
+                              <td>1h23 58min 40s</td>
+                              <td>1h23 58min 40s</td>
+                              <td>58min 40s</td>
+                              <td>4ème</td>
+                          </tr>
+                          <tr>
+                              <td>Joséphine</td>
+                              <td>Montpellier</td>
+                              <td>1h23 58min 40s</td>
+                              <td>1h23 58min 40s</td>
+                              <td>58min 40s</td>
+                              <td>4ème</td>
+                          </tr>
+                          <tr>
+                              <th colspan="5">Total</th>
+                              <td>100h</td>
+                          </tr>
+                      </tbody>
+                  </table>
+             
+                  </div>
+      
+              </div>
+        
+    </div>
+    </div>
+
+
+
+<script src="js/dom-animation.js"> </script>
+<script src="js/sommaire.js"> </script>
+<script src="js/table-responsive.js"> </script>
+<script src="js/style-guide.js"> </script>
+
+<script>
+window.addEventListener("DOMContentLoaded", (event) => {
+
+  console.log("DOM fully loaded and parsed");
+
+    let burger = document.querySelector("#burger")
+
+    burger.addEventListener("click", () =>{
+      burger.classList.toggle("open")
+
+    })
+
+
+
+    let menu = document.querySelector('.menu')
+    burger.addEventListener("click",(event) => {
+      DOMAnimations.slideToggle(menu)
+      
+    })
+
+    let checkboxMode = document.querySelector('#checkboxMode')
+    checkboxMode.addEventListener("click", () =>{
+      document.body.classList.toggle("dark"); 
+    })
+});
+</script>
+
+<script>
+  
+  </script>
+</body>
+
+</html>

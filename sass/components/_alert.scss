@@ -1,0 +1,52 @@
+/*! SASS #components - ALERT */
+
+//$sp: 2rem;
+$sp: 1rem;
+$fs: 1rem;
+$color-alert: red;
+$color-success: green;
+
+%alert__box {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 30rem;
+  padding: $sp;
+  border: 1px solid transparent;
+  //  margin: $sp auto;
+  margin: $sp;
+  color: #fff;
+  font-size: $fs;
+  border-radius: .3rem;
+}
+
+@mixin alert__box($color: #aaa, $txt: "hello!") {
+  @extend %alert__box;
+  background-color: $color;
+
+  &:hover {
+    border-color: $color ;
+    background: #fff;
+    color: $color;
+  }
+
+  &:after {
+    right: .5rem;
+    color: $color;
+    content: $txt;
+  }
+}
+
+.alert__box {
+  @include alert__box();
+
+  &--success {
+    @include alert__box($color-success, "Success!");
+  }
+
+  &--alert {
+    @include alert__box($color-alert, "Alert!");
+  }
+}

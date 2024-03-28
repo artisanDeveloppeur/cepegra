@@ -1,0 +1,411 @@
+.wrapper-form-custom {
+  width: 25rem;
+
+}
+
+.wrapper-form-custom div.wrapper-form-custom-div {
+  padding: 0.5em 0;
+
+}
+
+.custom_input,
+.custom_select,
+.custom-textarea {
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+  color: inherit;
+
+  width: 100%;
+  display: block;
+
+}
+
+
+.form-radio-checkbox .input-helper {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
+
+.form-radio-checkbox .input-helper--radio {
+  padding: 0px 20px;
+
+  &:before {
+    top: 5px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #222;
+  }
+}
+
+.form-radio-checkbox .input-helper--checkbox {
+  padding: 0 20px;
+
+  &:before {
+    top: 2.5px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #222;
+  }
+}
+
+.form-radio-checkbox input[type="radio"] {
+  display: none;
+
+  &:checked+label:before {
+    background: #222;
+  }
+}
+
+.form-radio-checkbox input[type="checkbox"] {
+  display: none;
+
+  &:checked+label:before {
+    background: #222;
+  }
+}
+
+.custom-select-div {
+  position: relative;
+
+}
+
+.custom-select-div select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: grey;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: '';
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: grey transparent transparent transparent;
+}
+
+// add arrow down
+.dropdown-toggle .select-selected::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.dropdown-toggle .select-selected.select-arrow-active:after {
+  border-color: transparent transparent grey transparent;
+  //top: 7px;
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: grey;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container-custom-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.container-custom-checkbox .checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-custom-checkbox:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-custom-checkbox input:checked~.checkmark {
+  background-color: grey;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.container-custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-custom-checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-custom-checkbox .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container-custom-radio {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-custom-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.container-custom-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-custom-radio:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-custom-radio input:checked~.checkmark {
+  background-color: grey;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.container-custom-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-custom-radio input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-custom-radio .checkmark:after {
+  top: 3.5px;
+  left: 3.5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+input.switchcheckbox {
+  appearance: none;
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 1rem;
+  position: relative;
+  background-color: #ccc;
+  transition: background-color .2s ease;
+
+  &:hover {
+    background-color: grey;
+
+    &::before {
+      color: #fff;
+    }
+  }
+}
+
+input.switchcheckbox::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: .25rem;
+  z-index: 9;
+  will-change: transform;
+  transition: transform .2s ease;
+}
+
+input.switchcheckbox::before {
+  display: block;
+  position: absolute;
+  margin: .25rem .5rem;
+  //content: "x";
+  right: 0;
+  //color: red;
+}
+
+input.switchcheckbox:checked {
+  background-color: #004F8B;
+
+  &:hover {
+    background-color: grey;
+  }
+
+  &::before {
+    content: "✔";
+    left: 0;
+    color: #fff;
+  }
+
+  &::after {
+    transform: translateX(1.5rem);
+  }
+}
+
+.form-custom-switch {
+  align-items: center;
+  display: flex;
+}
+
+
+.search__wrapper {
+  position: relative;
+
+  .search__input {
+    padding: 0.5rem;
+    color: inherit;
+    width: 100%;
+    display: block;
+    border: 1px solid #bdcadb;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(95, 113, 126, 0.19);
+    font-size: 0.8rem;
+    position: relative;
+
+  }
+
+
+}
+
+.search {
+
+  &__input.border {
+    width: 100%;
+    padding: 12px 24px;
+
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    line-height: 18px;
+    color: #575756;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 50px;
+    border: 1px solid #575756;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+    &::placeholder {
+      color: color(#575756 a(0.8));
+      //text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    &:hover,
+    &:focus {
+      padding: 12px 0;
+      outline: 0;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #575756;
+      border-radius: 0;
+      background-position: 100% center;
+    }
+  }
+}

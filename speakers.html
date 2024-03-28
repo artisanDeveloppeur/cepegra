@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <style>
+
+
+
+    </style>
+</head>
+<body>
+  <div class="card_flex_div">
+    <section class="card">
+      <picture class="card__pict">
+      <img class="card__img" src="https://assets.codepen.io/87353/brad_frost.webp" alt="Brad Frost">
+      </picture>
+      <h2 class="card__orator">Brad <strong class="card__name">Frost</strong></h2>
+      <p class="card__location">Pittsburgh, PA</p>
+    
+      <h3 class="card__topic">Atomic Design</h3>
+      <p class="card__description">We can construct design systems in a more methodical way</p>
+    
+      <time class="card__time">10h15</time> 
+      <span class="card__room">R2</span>
+      <a href="#" class="card__link">About</a>
+    </section>
+    
+    
+    <section class="cardoff">
+      <header>
+        <picture class="cardoff__pict">
+        <img class="card__img" src="https://assets.codepen.io/87353/brad_frost.webp" alt="Brad Frost">
+        </picture>
+        <h2 class="cardoff__orator">Brad <strong class="cardoff__name">Frost</strong></h2>
+        <p class="cardoff__location">Pittsburgh, PA</p>
+      </header>
+    
+      <div>
+        <h3 class="cardoff__topic">Atomic Design</h3>
+        <p class="cardoff__description">We can construct design systems in a more methodical way</p>
+      </div>
+    
+      <footer>
+        <time class="cardoff__time">10h15</time> 
+        <span class="cardoff__room">R2</span>
+        <a href="#" class="cardoff__link">About</a>
+      </footer>
+    </section>
+  </div>
+  <div class="card_flex_div">
+    <div class="all_speakers">
+
+      <section class="speaker speaker-active">
+        <header class="speaker__header">
+          <h2 class="speaker__name">Brad
+            <strong>Frost</strong>
+          </h2>
+          <p class="speaker__location">Lebanon</p>
+          <div class="speaker__photo">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87353/brad%403x.jpg" alt="Sara" />
+          </div>
+        </header>
+      
+        <div class="speaker__main">
+          <h2 class="speaker__main_title">Atomic Design</h2>
+          <p class="speaker__main_txt">Lorem ipsum dolor sit amet adipisicing elit similique suscipit facere</p>
+        </div>
+        <footer class="speaker__footer">
+          <time class="speaker__time" datetime="">10h15</time>
+          <span class="speaker__room">R2</span>
+          <a href="#" class="speaker__link">about</a>
+        </footer>
+      </section>
+      
+      <section class="speaker">
+        <header class="speaker__header">
+          <h2 class="speaker__name">Sara
+            <strong>Soueidan</strong>
+          </h2>
+          <p class="speaker__location">Lebanon</p>
+          <div class="speaker__photo">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87353/sara%403x.jpg" alt="Sara" />
+          </div>
+        </header>
+      
+        <div class="speaker__main">
+          <h2 class="speaker__main_title">Going Offline</h2>
+          <p class="speaker__main_txt">You can re-visit my Web site even when you’re not connected to the Internet</p>
+        </div>
+        <footer class="speaker__footer">
+          <time class="speaker__time" datetime="">10h15</time>
+          <span class="speaker__room">R2</span>
+          <a href="#" class="speaker__link">about</a>
+        </footer>
+      </section>
+      <section class="speaker">
+        <header class="speaker__header">
+          <h2 class="speaker__name">Brad
+            <strong>Frost</strong>
+          </h2>
+          <p class="speaker__location">Lebanon</p>
+          <div class="speaker__photo">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87353/brad%403x.jpg" alt="Sara" />
+          </div>
+        </header>
+      
+        <div class="speaker__main">
+          <h2 class="speaker__main_title">Atomic Design</h2>
+          <p class="speaker__main_txt">Lorem ipsum dolor sit amet adipisicing elit similique suscipit facere</p>
+        </div>
+        <footer class="speaker__footer">
+          <time class="speaker__time" datetime="">10h15</time>
+          <span class="speaker__room">R2</span>
+          <a href="#" class="speaker__link">about</a>
+        </footer>
+      </section>
+      
+      <section class="speaker">
+        <header class="speaker__header">
+          <h2 class="speaker__name">Sara
+            <strong>Soueidan</strong>
+          </h2>
+          <p class="speaker__location">Lebanon</p>
+          <div class="speaker__photo">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/87353/sara%403x.jpg" alt="Sara" />
+          </div>
+        </header>
+      
+        <div class="speaker__main">
+          <h2 class="speaker__main_title">Going Offline</h2>
+          <p class="speaker__main_txt">You can re-visit my Web site even when you’re not connected to the Internet</p>
+        </div>
+        <footer class="speaker__footer">
+          <time class="speaker__time" datetime="">10h15</time>
+          <span class="speaker__room">R2</span>
+          <a href="#" class="speaker__link">about</a>
+        </footer>
+      </section>
+    </div>                                     
+  </div>
+  <script>
+    let all_speackers = document.querySelector(".all_speakers") //sélectionne un conteneur dans all_speakers
+    let speakerActive = document.querySelector(".speaker-active")
+    
+    all_speackers.addEventListener("click", function (e) {  // ajoute event click à la liste
+        let mySection = e.target.closest("section") //cherche le parent de type "section" de l'élément réellement cliqué
+        if(speakerActive) speakerActive.classList.remove("speaker-active") //si un actif, on le retire
+        mySection.classList.toggle("speaker-active") //ajout class active si elle n'y est pas
+    })
+    
+    </script>
+</body>
+</html>

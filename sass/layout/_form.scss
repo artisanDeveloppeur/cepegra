@@ -1,0 +1,166 @@
+.wrapper-form {
+  width: 400px;
+  padding: 48px 48px 48px 48px;
+  background-color: #f2efee;
+
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+
+  background: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+.wrapper-form fieldset {
+  border: none;
+}
+
+.wrapper-form input {
+  order: 1;
+  margin-block: 0.3rem;
+
+  &:not(:placeholder-shown):not(:focus):valid~label {
+    //background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+
+  }
+
+  &:not(:placeholder-shown):invalid~.form__requirements {
+    color: red;
+  }
+
+
+
+  &:not(:placeholder-shown):not(:focus):invalid~label {
+    color: red;
+  }
+
+
+
+  &:not(:placeholder-shown):not(:focus):invalid~label::after {
+    content: "Erreur dans le champ !";
+    margin: 1rem;
+  }
+
+  &:not(:focus):invalid {
+    color: grey;
+  }
+
+  &:valid {
+    color: green;
+  }
+
+  &:invalid {
+    color: red;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &:focus~label {
+    color: #07c;
+  }
+}
+
+::placeholder {
+  transition: all .4s;
+}
+
+
+
+div.grid {
+  display: grid;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+
+  &__input {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 9px;
+    border: none;
+  }
+
+  &__input:invalid {
+    color: red;
+  }
+
+  &__input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(253, 242, 233, 0.5);
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__requirements {
+    //display: none;
+    order: 3;
+    display: grid;
+    justify-content: center;
+    transition: font-size .3s, color .3s .3S;
+    color: #0000;
+
+  }
+
+  &__button {
+    background-color: #f48982;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 8px;
+  }
+
+  &__button,
+  &__button:link,
+  &__button:visited {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+    margin: auto;
+
+  }
+
+  &__button {
+    outline: 1px solid #f48982;
+  }
+
+  &__button:hover {
+    background-color: #fdf2e9;
+    color: #f48982;
+  }
+
+}
+
+/*
+div.grid:has(sinput:invalid)::before {
+  content: '✖ ';
+  color: red;
+}
+
+div.grid:has(input:valid)::before {
+  content: '✓ ';
+  color: green;
+}
+
+*/
+
+div.grid:has(input:not(:placeholder-shown):not(:focus):invalid)+.form__requirements {
+  color: red
+}
+
+div.grid:has(input:valid)+.form__requirements {}

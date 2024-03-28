@@ -1,0 +1,122 @@
+.menu-burger ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 25px;
+  /*
+  gap: 100px;
+  justify-content: center;
+  */
+
+  justify-content: space-evenly;
+
+}
+
+.menu-slider {
+  color: #f6f6f6;
+  z-index: 1;
+  font-size: .8em;
+  position: fixed;
+  top: 1rem;
+  left: 5%;
+}
+
+@media screen and (min-width: 576px) {
+  .menu-slider {
+    left: 5%;
+  }
+}
+
+
+#trigger {
+  cursor: pointer;
+}
+
+#triggered {
+  height: 100vh;
+  width: 30%;
+  z-index: 1;
+  text-align: left;
+  background: #D0D0D0;
+  transition: all .9s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: -50%;
+}
+
+#triggered.visible {
+  right: 0;
+  width: 100%;
+
+}
+
+#triggered .triggered-link {
+  padding: 0;
+  list-style: none;
+}
+
+#triggered .triggered-link li:not(:first-child) {
+  border: none;
+  border-bottom: 2px solid black;
+  margin: 0 1em;
+}
+
+#triggered .triggered-link li:last-child {
+  border-bottom: 0;
+}
+
+#triggered .triggered-link a {
+  text-transform: uppercase;
+  color: #212931;
+  padding: 2.5rem 0;
+  font-weight: 900;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+#triggered .triggered-link a:hover {
+  /*color: #D2E0D3;*/
+}
+
+#triggered .triggered-icon {
+  margin: 1rem;
+  padding: 0 1rem;
+  list-style: none;
+  display: flex;
+}
+
+#triggered .triggered-icon li {
+  padding-right: .5em;
+}
+
+#triggered .triggered-icon .icon {
+  color: #212931;
+  height: 30px;
+  width: 30px;
+  font-size: .9em;
+}
+
+#triggered .triggered-icon .icon:hover {
+  /*color: #D2E0D3;*/
+}
+
+#close {
+  cursor: pointer;
+  /*color: #D2E0D3;*/
+  margin: 1rem 0;
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  display: block;
+}
+
+#close:hover {
+  /*color: #D2E0D3;*/
+  color: white;
+
+}
+
+.fas.fa-bars {
+  color: black;
+
+}
